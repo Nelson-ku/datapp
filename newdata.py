@@ -1,12 +1,12 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-st.header('st.button')
+st.header('The data analytics app')
 
-if st.button('say hello'):
-    st.write('why hello there ')
+if st.button('Check designer'):
+    st.write('Nelson')
 else:
-    st.write('Goodbye')
+    st.write('welcome data is beautiful')
 
 
 

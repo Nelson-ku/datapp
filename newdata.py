@@ -14,6 +14,8 @@ st.header('Data analytics with streamlit')
 st.write('Streamlit is a powerful and user-friendly data analytics tool that has been gaining popularity in recent years. With Streamlit, users can create highly customizable dashboards, visualizations, and reports, all without having to write complex code or rely on a web developer.')
 
 st.header('using data frame')
+st.write('Streamlit makes it easy to work with tables and display data in a tabular format. You can create tables using the st.table() function, or by using pandas DataFrames, and customize their appearance using CSS styling. Streamlit also provides features for sorting, filtering, and pagination of tables, making it a powerful tool for data analysis.')
+
 df=pd.DataFrame({
     'index':[1,2,3,4],
     'scores':[10,20,30,40]
@@ -25,7 +27,7 @@ df
 
 # dataframe=np.random.randn(10,20)
 # st.dataframe(dataframe)
-
+st.write('Streamlit makes it easy to highlight data points and insights in your visualizations. With its built-in support for hover text, click events, and custom styling, you can create interactive visualizations that allow you to explore your data in detail. Streamlit also provides a number of libraries and APIs that allow you to create custom highlighting effects, such as color-coding, tooltips, and animations. With these features, you can create visually appealing and informative visualizations that provide deeper insights into your data.')
  
 st.header('highlighting data')
 dataframe= pd.DataFrame(
@@ -40,7 +42,7 @@ st.dataframe(dataframe.style.highlight_max(axis=0))#highlighting your table
 
 
 #drawing a line chart using st.line_chart() function
-st.write('chart data')
+st.header('chart data')
 chart_data = pd.DataFrame(
     np.random.randn(20,3),
     columns=['a', 'b', 'c']

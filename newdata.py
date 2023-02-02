@@ -9,7 +9,11 @@ else:
     st.write('welcome data is beautiful')
 
 
+    
+st.header('Data analytics with streamlit')
+st.write('Streamlit is a powerful and user-friendly data analytics tool that has been gaining popularity in recent years. With Streamlit, users can create highly customizable dashboards, visualizations, and reports, all without having to write complex code or rely on a web developer.')
 
+st.header('using data frame')
 df=pd.DataFrame({
     'index':[1,2,3,4],
     'scores':[10,20,30,40]
@@ -19,11 +23,11 @@ df
 
 # used to draw a table of random values  Numpy to generate a random sample, and the st.dataframe() method to draw an interactive table.
 
-dataframe=np.random.randn(10,20)
-st.dataframe(dataframe)
+# dataframe=np.random.randn(10,20)
+# st.dataframe(dataframe)
 
  
-st.write('highlighting data')
+st.header('highlighting data')
 dataframe= pd.DataFrame(
     np.random.randn(10,20),
     columns=(' col %d' % i for i in range(20))
@@ -32,7 +36,7 @@ dataframe= pd.DataFrame(
 st.dataframe(dataframe.style.highlight_max(axis=0))#highlighting your table
 
 #drawing another a table using the st.table() function
-st.table(dataframe)
+# st.table(dataframe)
 
 
 #drawing a line chart using st.line_chart() function
@@ -43,6 +47,8 @@ chart_data = pd.DataFrame(
 
  )
 
+st.header('using Charts in streamlit')
+st.write('Streamlit provides a simple and intuitive way to create interactive charts and visualizations for your data. With the st.line_chart, st.bar_chart, and st.area_chart functions, you can easily create line, bar, and area charts that allow you to explore your data. Streamlit also provides built-in support for more advanced visualizations, including histograms, scatter plots, and box plots. With its built-in support for popular data visualization libraries like plotly, you can also create custom visualizations that meet your specific needs. Streamlit makes it easy to create beautiful and informative visualizations that provide insights into your data, whether you are working with small or large datasets.')
 st.line_chart(chart_data)
 
 st.write('plot a map using st.map() function of the san fransisco')
@@ -51,6 +57,8 @@ map_data=pd.DataFrame(
     np.random.randn(1000,2) /[50,50]+ [37.76, -122.4],
     columns=['lat','lon']
 )
+st.header('using maps in streamlit')
+st.write('Streamlit allows for the integration of maps into your data analytics applications, making it a great tool for geospatial data analysis. The platform provides a number of libraries and APIs that can be used to create interactive maps, including folium, plotly, and kepler.gl. These libraries allow you to create maps with custom markers, pop-ups, and polyglines, as well as add heatmaps and choropleth maps to your visualizations.')
 
 st.map(map_data)
 
